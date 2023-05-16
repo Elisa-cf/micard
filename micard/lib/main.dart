@@ -15,10 +15,30 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: const <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('images/elisa-canyelles.jpg'),
+            children: <Widget>[
+              const Center(
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/elisa-canyelles.jpg'),
+                ),
+              ),
+              const Text(
+                'Elisa Canyelles',
+                style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Pacifico'),
+              ),
+              Text(
+                'Full Stack Developer'.toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 139, 239, 234),
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSansPro-Regular',
+                  decoration: TextDecoration.underline,
+                ),
               ),
             ],
           ),
