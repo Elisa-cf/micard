@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Center(
                 child: CircleAvatar(
@@ -32,14 +33,49 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 'Full Stack Developer'.toUpperCase(),
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 20,
-                  color: Color.fromARGB(255, 139, 239, 234),
+                  color: Colors.teal.shade100,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'SourceSansPro-Regular',
-                  decoration: TextDecoration.underline,
+                  fontFamily: 'Source Sans Pro',
                 ),
               ),
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: const Icon(Icons.phone, color: Colors.teal),
+                  title: Text(
+                    '+33 669 573 984',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.teal.shade900,
+                        fontFamily: 'Source Sans Pro'),
+                  ),
+                ),
+              ),
+              Card(
+                  color: Colors.white,
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  child: ListTile(
+                    leading: const Icon(Icons.email, color: Colors.teal),
+                    title: Text(
+                      'elisacanyelles@gmail.com',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro'),
+                    ),
+                  ))
             ],
           ),
         ),
